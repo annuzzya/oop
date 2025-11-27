@@ -1,0 +1,21 @@
+# Visual Studio & VS Code directories
+.vs/
+.vscode/
+
+# Build results (Сміття)
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.user
+*.cache
+*.pdb
+
+# Executables & Libraries
+*.dll
+*.exe
+
+# macOS garbage (Важливо для мака)
+.DS_Store
