@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:DormitoryApp"
+             x:Class="DormitoryApp.MainPage"
+             Title="Пошук у гуртожитку (Лаб. №2)">
+    <Grid RowDefinitions="Auto, Auto, *, Auto" ColumnDefinitions="250, *" Padding="10" RowSpacing="5" ColumnSpacing="10">
+
+        <VerticalStackLayout Grid.Row="0" Grid.Column="0" Spacing="5">
+            <Button x:Name="BtnLoadXml" Text="1. Обрати XML-файл" Clicked="OnLoadXmlClicked" />
+            <Label x:Name="LblXmlFile" Text="XML-файл не обрано" FontSize="12" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="0" Grid.Column="1" Spacing="5">
+            <Button x:Name="BtnLoadXsl" Text="2. Обрати XSL-файл" Clicked="OnLoadXslClicked" />
+            <Label x:Name="LblXslFile" Text="XSL-файл не обрано" FontSize="12" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="1" Grid.Column="0" Spacing="5" Margin="0,10,0,0">
+            <Label Text="Параметри пошуку:" FontAttributes="Bold" />
+
+            <Entry x:Name="EntryName" Placeholder="ПІБ" />
+
+            <Picker x:Name="PickerFaculty" Title="Факультет">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Всі</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+                <Picker.SelectedIndex>0</Picker.SelectedIndex>
+            </Picker>
+
+            <Entry x:Name="EntryDepartment" Placeholder="Кафедра" />
+            <Entry x:Name="EntryCourse" Placeholder="Курс" Keyboard="Numeric" />
+            <Entry x:Name="EntryRoom" Placeholder="Кімната" />
+
+            <Label Text="Метод пошуку (Стратегія):" Margin="0,10,0,0" />
+            <Picker x:Name="PickerStrategy" SelectedIndex="0">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>DOM</x:String>
+                        <x:String>SAX</x:String>
+                        <x:String>LINQ to XML</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </VerticalStackLayout>
+
+        <CollectionView x:Name="ResultsView" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" EmptyView="Результати пошуку будуть тут...">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Resident">
+                    <Frame Padding="10" Margin="0,5">
+                        <VerticalStackLayout Spacing="5">
+                            <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="16" />
+                            <Label Text="{Binding Faculty, StringFormat='Факультет: {0}'}" />
+                            <Label Text="{Binding Department, StringFormat='Кафедра: {0}'}" />
+                            <HorizontalStackLayout Spacing="10">
+                                <Label Text="{Binding Course, StringFormat='Курс: {0}'}" />
+                                <Label Text="{Binding Room, StringFormat='Кімната: {0}'}" />
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <HorizontalStackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Spacing="10" HorizontalOptions="FillAndExpand">
+            <Button x:Name="BtnSearch" Text="3. Пошук" Clicked="OnSearchClicked" HorizontalOptions="FillAndExpand" />
+            <Button x:Name="BtnGenerateHtml" Text="4. Згенерувати HTML" Clicked="OnGenerateHtmlClicked" HorizontalOptions="FillAndExpand" />
+            <Button x:Name="BtnClear" Text="Очистити" Clicked="OnClearClicked" HorizontalOptions="FillAndExpand" />
+            <Button x:Name="BtnExit" Text="Вихід" Clicked="OnExitClicked" HorizontalOptions="FillAndExpand" BackgroundColor="DarkRed" />
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>

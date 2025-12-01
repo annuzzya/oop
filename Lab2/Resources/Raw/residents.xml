@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dormitory>
+    <Resident 
+        Name="Анна Кучерова"
+        Faculty="ФКНК"
+        Department="Комп’ютерні науки"
+        Course="1"
+        Room="207"
+        ResidenceStart="2024-09-01"
+        ResidenceEnd="2025-06-30"
+        ContractNumber="A12345" />
+
+    <Resident 
+        Name="Олег Мельник"
+        Faculty="ФКНК"
+        Department="Кібербезпека"
+        Course="2"
+        Room="105"
+        ResidenceStart="2023-09-01"
+        ResidenceEnd="2024-06-30"
+        ContractNumber="B55432" />
+
+    <Resident 
+        Name="Марія Бондаренко"
+        Faculty="Інститут Журналістики"
+        Department="Медіакомунікації"
+        Course="3"
+        Room="312"
+        ResidenceStart="2022-09-01"
+        ResidenceEnd="2025-06-30"
+        ContractNumber="C92831" />
+
+    <Resident 
+        Name="Данило Прончук"
+        Faculty="Факультет Математики"
+        Department="Статистика"
+        Course="1"
+        Room="120"
+        ResidenceStart="2024-09-01"
+        ResidenceEnd="2025-06-30"
+        ContractNumber="D20493" />
+
+    <Resident 
+        Name="Ольга Дюгаль"
+        Faculty="ФКНК"
+        Department="Комп’ютерні науки"
+        Course="4"
+        Room="408"
+        ResidenceStart="2021-09-01"
+        ResidenceEnd="2025-06-30"
+        ContractNumber="E56781" />
+
+</Dormitory>
