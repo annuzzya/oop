@@ -13,7 +13,8 @@ namespace DormitoryApp
     {
         public void GenerateHtml(List<Resident> residents, string xslPath, string outputPath)
         {
-            var serializer = new XmlSerializer(typeof(List<Resident>));
+            var serializer = new XmlSerializer(typeof(List<Resident>),
+            new XmlRootAttribute("ListOfResidents"));
             var stringWriter = new StringWriter();
             using (var xmlWriter = XmlWriter.Create(stringWriter, new XmlWriterSettings { Indent = true }))
             {
