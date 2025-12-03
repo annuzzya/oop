@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DormitoryLab.AddEditPage"
+             Title="Мешканець">
+    <VerticalStackLayout Spacing="15" Padding="20">
+        <Entry x:Name="EntryLastName" Placeholder="Прізвище"/>
+        <Entry x:Name="EntryFirstName" Placeholder="Ім'я"/>
+        <Entry x:Name="EntryRoom" Placeholder="Номер кімнати" Keyboard="Numeric"/>
+        <Entry x:Name="EntryFaculty" Placeholder="Факультет"/>
+        <Entry x:Name="EntryCourse" Placeholder="Курс (1-6)" Keyboard="Numeric"/>
+
+        <Button Text="Зберегти" Clicked="OnSaveClicked"/>
+    </VerticalStackLayout>
+</ContentPage>

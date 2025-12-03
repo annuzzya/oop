@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DormitoryLab.MainPage"
+             Title="Диспетчер Гуртожитку">
+
+    <Grid RowDefinitions="Auto, Auto, *, Auto" Padding="10" RowSpacing="10">
+
+        <HorizontalStackLayout Grid.Row="0" Spacing="10">
+            <Button Text="Відкрити JSON" Clicked="OnOpenFileClicked"/>
+            <Button Text="Зберегти JSON" Clicked="OnSaveFileClicked"/>
+            <Button Text="Про програму" Clicked="OnAboutClicked"/>
+        </HorizontalStackLayout>
+
+        <VerticalStackLayout Grid.Row="1" Spacing="5">
+
+            <Picker x:Name="SearchCriteriaPicker" Title="Критерій пошуку">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Прізвище</x:String>
+                        <x:String>Кімната</x:String>
+                        <x:String>Факультет</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+                <Picker.SelectedIndex>0</Picker.SelectedIndex>
+            </Picker>
+
+            <Grid ColumnDefinitions="*, Auto" ColumnSpacing="10">
+                <Entry Grid.Column="0" 
+                       x:Name="SearchEntry" 
+                       Placeholder="Введіть параметр для пошуку..."/>
+
+                <Button Grid.Column="1" 
+                        Text="Пошук" 
+                        Clicked="OnSearchClicked"
+                        BackgroundColor="#7B2FF7"
+                        TextColor="White"/>
+
+            </Grid>
+
+        </VerticalStackLayout>
+        
+        <CollectionView Grid.Row="2" x:Name="ResidentsCollection" SelectionMode="Single">
+            <CollectionView.Header>
+                <Grid ColumnDefinitions="2*, 2*, 1*, 2*, 1*" BackgroundColor="#DCC6FF" Padding="10">
+                    <Label Grid.Column="0" Text="Прізвище" TextColor="#d2b2bff" FontAttributes="Bold"/>
+                    <Label Grid.Column="1" Text="Ім'я" TextColor="#d2b2bff" FontAttributes="Bold"/>
+                    <Label Grid.Column="2" Text="Кімн." TextColor="#d2b2bff" FontAttributes="Bold"/>
+                    <Label Grid.Column="3" Text="Факультет" TextColor="#d2b2bff" FontAttributes="Bold"/>
+                    <Label Grid.Column="4" Text="Курс" TextColor="#d2b2bff" FontAttributes="Bold"/>
+                </Grid>
+            </CollectionView.Header>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="2*, 2*, 1*, 2*, 1*" Padding="5">
+                        <Label Grid.Column="0" Text="{Binding LastName}"/>
+                        <Label Grid.Column="1" Text="{Binding FirstName}"/>
+                        <Label Grid.Column="2" Text="{Binding RoomNumber}"/>
+                        <Label Grid.Column="3" Text="{Binding Faculty}"/>
+                        <Label Grid.Column="4" Text="{Binding Course}"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <HorizontalStackLayout Grid.Row="3" Spacing="10" HorizontalOptions="Center">
+            <Button Text="Додати" Clicked="OnAddClicked"/>
+            <Button Text="Редагувати" Clicked="OnEditClicked" />
+            <Button Text="Видалити" Clicked="OnDeleteClicked"/>
+            <Button Text="Скинути фільтр" Clicked="OnResetFilterClicked"/>
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>

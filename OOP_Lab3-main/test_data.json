@@ -1,0 +1,58 @@
+{
+  "Residents": [
+    {
+      "FirstName": "\u041E\u043B\u0435\u043A\u0441\u0430\u043D\u0434\u0440",
+      "LastName": "\u0411\u043E\u043D\u0434\u0430\u0440\u0435\u043D\u043A\u043E",
+      "RoomNumber": 903,
+      "Faculty": "\u0424\u041A\u041D\u041A",
+      "Course": 2,
+      "ResidenceStart": "2022-09-01T00:00:00",
+      "ResidenceEnd": "2026-06-30T00:00:00"
+    },
+    {
+      "FirstName": "\u041C\u0430\u0440\u0456\u044F",
+      "LastName": "\u041A\u043E\u0432\u0430\u043B\u0435\u043D\u043A\u043E",
+      "RoomNumber": 434,
+      "Faculty": "\u041C\u0435\u0445\u043C\u0430\u0442",
+      "Course": 1,
+      "ResidenceStart": "2023-09-01T00:00:00",
+      "ResidenceEnd": "2027-06-30T00:00:00"
+    },
+    {
+      "FirstName": "\u0406\u0432\u0430\u043D",
+      "LastName": "\u0422\u043A\u0430\u0447\u0435\u043D\u043A\u043E",
+      "RoomNumber": 601,
+      "Faculty": "\u0424\u041A\u041D\u041A",
+      "Course": 4,
+      "ResidenceStart": "2020-09-01T00:00:00",
+      "ResidenceEnd": "2024-06-30T00:00:00"
+    },
+    {
+      "FirstName": "\u041E\u043B\u044C\u0433\u0430",
+      "LastName": "\u0428\u0435\u0432\u0447\u0435\u043D\u043A\u043E",
+      "RoomNumber": 212,
+      "Faculty": "\u042E\u0440\u0438\u0434\u0438\u0447\u043D\u0438\u0439",
+      "Course": 3,
+      "ResidenceStart": "2021-09-01T00:00:00",
+      "ResidenceEnd": "2025-06-30T00:00:00"
+    },
+    {
+      "FirstName": "\u0414\u043C\u0438\u0442\u0440\u043E",
+      "LastName": "\u0411\u043E\u0439\u043A\u043E",
+      "RoomNumber": 724,
+      "Faculty": "\u041C\u0435\u0445\u043C\u0430\u0442",
+      "Course": 1,
+      "ResidenceStart": "2023-09-01T00:00:00",
+      "ResidenceEnd": "2027-06-30T00:00:00"
+    },
+    {
+      "FirstName": "\u041E\u043B\u0435\u043D\u0430",
+      "LastName": "\u0413\u0443\u0440\u0430",
+      "RoomNumber": 724,
+      "Faculty": "\u0424\u0456\u0442",
+      "Course": 1,
+      "ResidenceStart": "0001-01-01T00:00:00",
+      "ResidenceEnd": "0001-01-01T00:00:00"
+    }
+  ]
+}
