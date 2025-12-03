@@ -5,7 +5,7 @@
              Title="Про програму">
     <VerticalStackLayout Padding="20" Spacing="10" VerticalOptions="Center">
         <Label Text="Програма: Диспетчер Гуртожитку" FontSize="20" FontAttributes="Bold"/>
-        <Label Text="Демченко Валерія" FontSize="16"/>
+        <Label Text="Кучерова Анна" FontSize="16"/>
         <Label Text="Група: К-26" FontSize="16"/>
         <Label Text="Рік: 2025" FontSize="16"/>
         <Label Text="Опис: Лабораторна робота №3. Програма дозволяє керувати списком мешканців, зберігати дані у JSON та виконувати пошук."/>
